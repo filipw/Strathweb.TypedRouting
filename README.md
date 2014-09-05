@@ -31,10 +31,16 @@ Consider the sample controller:
 You define the routes to this controller with `TypedRouting` using the following syntax:
 
     var config = new HttpConfiguration();
-    config.EnableTypedDirectRouteProvider();
+    config.EnableTypedRouting();
  
     config.TypedRoute("test", c => c.Action<TestController>(x => x.Get()));
     config.TypedRoute("test/{id:int}", c => c.Action<TestController>(x => x.GetById(Param.Any<int>())));
+
+You can use the fluent API to give the route a name (so that you can use it with `UrlHelper` and other libraries requiring you to reference routes by name:
+
+    config.TypedRoute("test", c => c.Action<TestController>(x => x.Get().Name("getTest"));
+    
+`TypedRouting` works well with `UrlHelper` and with [Drum](https://github.com/pmhsfelix/drum)
 
 ### Blog post
 
