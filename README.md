@@ -45,3 +45,7 @@ You can use the fluent API to give the route a name (so that you can use it with
 ### Blog post
 
 [Read more](http://www.strathweb.com/2014/07/building-strongly-typed-route-provider-asp-net-web-api/) at my blog
+
+### License
+
+2014 Filip W [MIT](https://github.com/filipw/Strathweb.TypedRouting/blob/master/LICENSE)
