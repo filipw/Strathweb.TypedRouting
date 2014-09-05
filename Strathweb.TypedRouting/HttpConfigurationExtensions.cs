@@ -27,7 +27,7 @@ namespace Strathweb.TypedRouting
             return route;
         }
 
-        public static void EnableTypedDirectRouteProvider(this HttpConfiguration config)
+        public static void EnableTypedRouting(this HttpConfiguration config)
         {
             config.MapHttpAttributeRoutes(new TypedDirectRouteProvider());
         }
